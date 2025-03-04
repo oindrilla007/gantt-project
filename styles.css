@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 20%;
+    padding: 10px;
+    background: #f4f4f4;
+}
+
+button {
+    display: block;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.gantt {
+    width: 80%;
+    border-left: 1px solid #ddd;
+    padding: 10px;
+    overflow-x: scroll;
+}
+
+.gantt-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #000;
+}
+
+.gantt-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.day {
+    width: 100px;
+    text-align: center;
+    padding: 5px;
+    border-right: 1px solid #ddd;
+}
+
+.task {
+    padding: 5px;
+    background: lightblue;
+    cursor: grab;
+    margin: 5px 0;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px #000;
+}
+
+.modal-content {
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+}

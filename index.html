@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gantt Chart</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Tasks</h2>
+            <button id="addTaskBtn">+ Add Task</button>
+            <ul id="taskList"></ul>
+        </div>
+
+        <div class="gantt">
+            <div class="gantt-header" id="ganttHeader"></div>
+            <div class="gantt-body" id="ganttBody"></div>
+        </div>
+    </div>
+
+    <div class="modal" id="taskModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Add New Task</h3>
+            <input type="text" id="taskName" placeholder="Task Name">
+            <input type="text" id="taskAssignee" placeholder="Assignee">
+            <select id="taskPriority">
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+            </select>
+            <input type="date" id="taskDeadline">
+            <button id="saveTaskBtn">Save Task</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
